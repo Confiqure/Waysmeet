@@ -64,7 +64,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="index.html">Home
                 <span class="sr-only">(current)</span>
               </a>
@@ -75,7 +75,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Services</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
@@ -86,67 +86,84 @@
     <!-- Page Content -->
     <div class="container">
 
-      <!-- Portfolio Item Heading -->
-      <h1 class="my-4">Page Heading
-        <small>Secondary Text</small>
-      </h1>
-
-      <!-- Portfolio Item Row -->
-      <div class="row">
-
-        <div class="col-md-8">
-          <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Map Column -->
+            <div class="col-lg-8 mb-4">
+                <!-- Embedded Google Map -->
+                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5823.341535927218!2d-70.928016!3d43.132442000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e293979ef134e3%3A0xa6cef0a06f6eaf9a!2sThe+Waysmeet+Center!5e0!3m2!1sen!2sus!4v1511930266761"></iframe>
+            </div>
+            <!-- Contact Details Column -->
+            <div class="col-lg-4 mb-4">
+                <h3>Contact Details</h3>
+                <p>
+                    15 Mill Rd.
+                    <br />Durham, NH 03824
+                    <br />
+                </p>
+                <p>
+                    <abbr title="Phone">P</abbr>: (603) 862-1165
+                </p>
+                <p>
+                    <abbr title="Email">E</abbr>: <a href="mailto:waysmeet@comcast.net">waysmeet@comcast.net
+                    </a>
+                </p>
+                <p>
+                    <table border="0px">
+                        <tr>
+                            <td><abbr title="Hours">H</abbr>:</td>
+                            <td>Monday - Friday: 9:00 AM to 5:30 PM</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Saturday: 10:00 AM to 3:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Sunday: Closed</td>
+                        </tr>
+                    </table>
+                </p>
+            </div>
         </div>
+        <!-- /.row -->
 
-        <div class="col-md-4">
-          <h3 class="my-3">Project Description</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-          <h3 class="my-3">Project Details</h3>
-          <ul>
-            <li>Lorem Ipsum</li>
-            <li>Dolor Sit Amet</li>
-            <li>Consectetur</li>
-            <li>Adipiscing Elit</li>
-          </ul>
+        <!-- Contact Form -->
+        <div class="row">
+            <div class="col-lg-8 mb-4">
+                <h3>Send us Feedback</h3>
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Name:</label>
+                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Rate your experience:</label>
+                            <input type="number" class="form-control" id="rating" min="1" max="5" step="0.5" value="5" required data-validation-required-message="Please enter a rating from 1 (worst) to 5 (best).">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Message:</label>
+                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
         </div>
-
-      </div>
-      <!-- /.row -->
-
-      <!-- Related Projects Row -->
-      <h3 class="my-4">Related Projects</h3>
-
-      <div class="row">
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-        </div>
-
-      </div>
-      <!-- /.row -->
+        <!-- /.row -->
 
     </div>
     <!-- /.container -->
+
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
@@ -157,9 +174,14 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/tether/tether.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-  </body>
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+</body>
 
 </html>
