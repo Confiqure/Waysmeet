@@ -7,3 +7,13 @@ body {
     padding-top: 0px;
   }
 }
+
+.navbar-brand {
+  padding: 0px;
+}
+
+.navbar-brand>img {
+  height: 60px;
+  padding: 15px;
+  width: auto;
+}
